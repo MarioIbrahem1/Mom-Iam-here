@@ -1,0 +1,346 @@
+:root {
+    --main-color: #2196f3;
+    --alt-color: #1787e0;
+    --tra: 0.3s;
+    --section-padding: 100px;
+    --section-background: #ececec;
+}
+
+* {
+    font-family: cursive;
+}
+
+body {
+    background-color: var(--section-background);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    font-family: cursive;
+}
+
+/* ------------------------------------------------------------ */
+
+nav {
+    color: rgb(236, 220, 220);
+    display: inline-block;
+    overflow: hidden;
+    min-width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    color: rgb(15, 7, 7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+
+}
+
+#header:hover {
+    transition: all 1s ease-in-out;
+    background-color: #200d6a;
+    box-shadow: 5px 5px 15px black, 10px 10px 15px #7d2c13;
+    color: aliceblue;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0;
+    float: right;
+    margin-right: 20px;
+    justify-content: space-around;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+nav li {
+
+    display: inline-block;
+
+}
+
+nav li a {
+    display: block;
+    color: #000000;
+    margin-right: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 14px 16px;
+
+
+
+}
+
+nav li a:hover {
+    transition: all 1s ease-in-out;
+    background-color: #200d6a;
+    box-shadow: 5px 5px 15px black, 10px 10px 15px #7d2c13;
+    color: aliceblue;
+
+}
+
+/* ------------------------------------------------------------ */
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* ------------------------------------- */
+
+footer {
+    background-color: #f8f9fa;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #555;
+}
+
+footer a:hover {
+    color: #6c757d;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+/* -------------------------------------- */
+
+/* تحديد عنصر HTML الذي يحتوي على فئة "sparks" */
+.sparks::before {
+    /* إضافة محتوى فارغ داخل العنصر ::before */
+    content: '';
+
+    /* تحديد مكان وعرض وارتفاع العنصر */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 30px;
+
+    /* جعل العنصر فوق العناصر الأخرى في نفس المكان */
+    z-index: 1;
+
+    /* إنشاء خلفية متعددة الطبقات باستخدام خاصية linear-gradient */
+    background: linear-gradient(135deg, white 25%, transparent 25%),
+        linear-gradient(225deg, white 25%, transparent 25%);
+
+    /* تعيين حجم الخلفية المنشأة بالخاصية linear-gradient */
+    background-size: 30px 30px;
+}
+
+/* ------------------------------------------------ */
+.main-heading {
+    text-align: center;
+    border: 5px solid salmon;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    margin: 0 600px 70px;
+}
+
+.main-heading:hover {
+    transition: all 0.5s ease-in-out;
+    background-color: #3830a3;
+    color: #ffffff;
+    border: 1px solid #3830a3;
+    text-align: center;
+}
+
+/* ------------------------------------------------ */
+
+.features {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.features .container .box {
+    text-align: center;
+}
+
+.features .container .image-holder {
+    position: relative;
+    overflow: hidden;
+}
+
+.features .container .quality .image-holder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(244 64 54 / 60%);
+}
+
+.features .container .passion .image-holder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(3 169 244 / 60%);
+}
+
+.features .container .time .image-holder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 150 136 / 60%);
+}
+
+.features .container .image-holder::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent white transparent;
+    transition: var(--tra);
+}
+
+.features .container .box:hover .image-holder::after {
+    border-width: 170px 500px 170px 0;
+}
+
+.features .container .image-holder img {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    max-height: 100%;
+}
+
+.features .container .box h2 {
+    font-size: 30px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.features .container .quality h2::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 9px);
+    bottom: -15px;
+    height: 2px;
+    background-color: #f44036;
+    left: 9px;
+}
+
+.features .container .passion h2::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 9px);
+    bottom: -15px;
+    height: 2px;
+    left: 9px;
+    background-color: #03a9f4;
+    ;
+}
+
+.features .container .time h2::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 9px);
+    bottom: -15px;
+    height: 2px;
+    background-color: #009688;
+    left: 9px;
+}
+
+.features .container .box p {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #777;
+    line-height: 2;
+}
+
+.features .container .time a {
+    border-color: #009688 !important;
+}
+
+.features .container .quality a {
+    border-color: #f44036 !important;
+}
+
+.features .container .passion a {
+    border-color: #03a9f4 !important;
+}
+
+.features .container .box a {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid transparent;
+    padding: 10px 37px;
+    border-radius: 7px;
+    transition: var(--tra);
+}
+
+.features .container .quality a {
+    color: #f44036;
+    background: linear-gradient(to right, #f44036 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.features .container .time a {
+    color: #009688;
+    background: linear-gradient(to right, #009688 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.features .container .passion a {
+    color: #03a9f4;
+    background: linear-gradient(to right, #03a9f4 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right;
+}
+
+.features .container .box:hover a {
+    background-position: left;
+    color: white;
+}
+
+/* -------------------------------------- */
+
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 50px;
+}
+
+.container p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}

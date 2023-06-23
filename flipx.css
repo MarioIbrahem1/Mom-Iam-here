@@ -1,0 +1,187 @@
+body {
+  background-image: url(test3.jpg);
+}
+
+
+
+/* عنوان الصفحة */
+#tit {
+  margin-top: 35px;
+  width: 300px;
+  text-align: center;
+  font-family: cursive;
+  margin-left: 600px;
+  /* المسافة بين الأعلى والعنوان */
+  border-radius: 20px;
+  border: 5px solid rgb(143, 103, 93);
+  color: rgb(175, 175, 115);
+}
+
+#tit:hover {
+  color: #000;
+}
+
+/* نموذج الدخول */
+form {
+  width: 450px;
+
+  /* عرض النموذج */
+  /* margin: 50px auto; */
+  /* وسط النموذج في الصفحة */
+  background-color: #fff;
+  /* لون خلفية النموذج */
+  border-radius: 10px;
+  /* شكل الحواف */
+  padding: 40px;
+  /* المسافة بين الحواف والمحتوى */
+  margin-left: 200px;
+  margin-top: 150px;
+}
+
+#form_sign {
+  width: 450px;
+}
+
+/* التسميات */
+label {
+  display: block;
+  /* عرض النص كاملاً على سطر واحد */
+  margin-bottom: 8px;
+  /* المسافة بين التسمية والحقل */
+  color: #777;
+  /* لون التسمية */
+}
+
+/* حقول الإدخال */
+input[type="text"],
+#phone,
+input[type="password"],
+#phone {
+  width: 100%;
+  /* عرض الحقل */
+  padding: 12px 20px;
+  /* المسافة بين النص والحواف */
+  margin-bottom: 20px;
+  /* المسافة بين الحقول */
+  border: none;
+  /* إزالة الحدود */
+  border-radius: 4px;
+  /* شكل الحواف */
+  box-sizing: border-box;
+  /* حجم الحقل يشمل الحواف */
+  background-color: #e7e7e7;
+  /* لون خلفية الحقل */
+  color: #333;
+  /* لون النص */
+}
+
+/* رابط استعادة كلمة المرور */
+a.Forgot_password {
+  float: right;
+  /* تطبيق التعليمات على يمين الصفحة */
+  font-size: 14px;
+  /* حجم الخط */
+  text-decoration: underline;
+  /* تحتين النص */
+  color: #777;
+  /* لون النص */
+}
+
+a.Forgot_password :hover {
+  text-decoration: underline;
+  color: #ae3b3b;
+  /* لون النص */
+
+  /* رابط إنشاء حساب جديد */
+}
+
+/* رابط إنشاء حساب جديد */
+a.create_acc {
+  font-size: 16px;
+  /* حجم الخط */
+  text-decoration: none;
+  /* تحتين النص */
+  color: #777;
+  /* لون النص */
+}
+
+a#create:hover {
+  text-decoration: underline;
+  color: #ae3b3b;
+}
+
+b {
+  display: block;
+  /* عرض النص كاملاً على سطر واحد */
+  margin-top: 30px;
+  /*المسافة بين النموذج والرسالة */
+  margin-bottom: 10px;
+  /* المسافة بين الرسالة والأسفل */
+  color: #777;
+  /* لون النص */
+}
+
+
+.card {
+  position: relative;
+  width: auto;
+  height: auto;
+  perspective: 1000px;
+
+
+}
+
+.card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-back,
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* لعرض الجهة الأمامية فقط */
+}
+
+.card-front {
+  background-color: #fff;
+  color: #000;
+  /* خصائص أخرى للجهة الأمامية */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #fff;
+  color: #000;
+  /* خصائص أخرى للجهة الخلفية */
+}
+
+/* تعديل خصائص CSS الأساسية بعد تحويل الكارت */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+#flip-card-btn {
+
+  font-size: 20px;
+  font-family: cursive;
+  border: 5px solid rgba(154, 60, 60, 0.416);
+  border-radius: 20px;
+
+}
+
+.card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+
+#flip-card-btn:hover {
+  color: rgb(175, 175, 115);
+
+
+}

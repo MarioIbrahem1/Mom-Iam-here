@@ -1,0 +1,345 @@
+/* universal styling*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Caveat', cursive;
+
+}
+
+/* top navbar styling*/
+.top_header {
+  background-color: rgba(218, 243, 255, 255);
+  height: auto;
+  min-width: 100%;
+}
+
+header {
+  min-width: 100;
+  background-color: transparent;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 100px;
+}
+
+.logo {
+  display: inline-flexbox;
+  align-items: stretch;
+  justify-content: flex-start;
+
+}
+
+.logo_img {
+  position: relative;
+  left: 330px;
+  height: 200px;
+  border-radius: 50%;
+
+}
+
+.Name {
+  position: relative;
+  right: 150px;
+  top: 110px;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: blue;
+  background-color: rgba(218, 243, 255, 255);
+  font-weight: 600;
+  font-size: 30px;
+  transition: 0.4 ease-in-out;
+
+}
+
+
+nav ul li a:hover {
+  color: red;
+}
+
+
+.btn1 {
+  background-color: #00bfff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: grab;
+  box-shadow: 5px 5px 15px black, 10px 10px 15px #00bfff;
+}
+
+.btn:hover {
+  background-color: inherit;
+
+}
+
+.hero-sectio {
+  min-width: 100;
+}
+
+.hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: space space-evenly;
+  padding: 40px 100px;
+}
+
+.left-box {
+  margin-left: 40px;
+  padding: 50px 0px;
+}
+
+.ready {
+  color: rgb(175, 25, 25);
+  margin-bottom: 8px;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+.left-box h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  line-height: 44px;
+}
+
+span {
+  color: chartreuse;
+}
+
+.left-para {
+  margin-bottom: 40px;
+  line-height: 1.7;
+  font-size: 30px;
+}
+
+.right-img {
+  transform: translate(70px);
+  width: 600px;
+}
+
+.name {
+  border-radius: 30%;
+  background-size: cover;
+  margin: 50%;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.About {
+  text-align: center;
+  font-size: 70px;
+  letter-spacing: 7px;
+  font-weight: 700;
+  text-shadow: 4px 4px 4px black;
+
+}
+
+.lead {
+  margin-top: -90px;
+  text-align: center;
+  font-size: 20px;
+}
+
+::selection {
+  color: palevioletred;
+  background-color: black;
+}
+
+#bottom {
+  size: 20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: orange;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/* تحديد خصائص الحاوية الرئيسية */
+.grid-container {
+  width: 70%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* 3 اعمدة في كل صف */
+  grid-gap: 1rem;
+  /* المسافة بين الصناديق */
+  padding: 20px;
+}
+
+/* تحديد خصائص الصندوق */
+.box {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  /* تعديل الانتقال عند التحويل */
+  position: relative;
+  /* جعل الصندوق نسبيًا للحاوية */
+}
+
+/* تحديد خصائص الصورة */
+.imgbox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* جعل الصورة لا تتجاوز حجم الصندوق */
+  position: relative;
+  /* جعل الصورة نسبيًا للصندوق */
+}
+
+.imgbox img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+
+
+  /* تعديل مقاس الصورة */
+  transition: transform 0.5s ease-in-out;
+  /* تعديل الانتقال عند التحويل */
+
+}
+
+/* تحديد خصائص النص */
+.content {
+  position: absolute;
+  /* جعل النص مطابقًا للصورة */
+  bottom: 0px;
+  /* جعل النص في الأسفل */
+  width: 70%;
+  /* جعل النص مساحة كاملة من الصندوق */
+  background: rgba(255, 255, 255, 0.8);
+  /* اخفاء الخلفية */
+  border-radius: 5px;
+  /* تحديد شكل الحواف */
+  padding: 11px;
+  /* تحديد هامش داخلي للنص */
+  transition: transform 0.5s ease-in-out;
+  /* تعديل الانتقال عند التحويل */
+  transform: translateY(10%);
+  /* تحريك النص للأسفل */
+  opacity: 0;
+  font-size: 8px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* تحديد تحريك الصندوق عند تحويله */
+.box:hover .imgbox img {
+  transform: scale(1.2);
+  /* تكبير الصورة عند التحويل */
+
+}
+
+.box:hover .content {
+  transform: translateY(1.2);
+  /* تحريك النص لأعلى */
+  opacity: 1;
+
+}
+
+.conten1 span {
+  font-size: 1em;
+  font-style: bold;
+  color: #870f0f;
+
+}
+
+:root {
+  --border-width: 7px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eb4a62;
+}
+
+.sec-loading {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-loading .one {
+  height: 80px;
+  width: 80px;
+  border: var(--border-width) solid white;
+  transform: rotate(45deg);
+  border-radius: 0 50% 50% 50%;
+  position: relative;
+  animation: move 0.5s linear infinite alternate-reverse;
+}
+
+.sec-loading .one::before {
+  content: "";
+  position: absolute;
+  height: 55%;
+  width: 55%;
+  border-radius: 50%;
+  border: var(--border-width) solid transparent;
+  border-top-color: white;
+  border-bottom-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes move {
+  to {
+    transform: translateY(15px) rotate(45deg);
+  }
+}
+
+/* ________________________________________________________________ */

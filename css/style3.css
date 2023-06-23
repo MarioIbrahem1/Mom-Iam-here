@@ -1,0 +1,62 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+    background-color: rgba(218, 243, 255, 255);
+    background-image: url(images/—Pngtree—frosted\ glass\ texture\ frosted\ white_1466894.png);
+    background-size: cover;
+   
+}
+p{
+    font-size: 210px;
+  text-align: center;
+}
+.home {
+    background-color: #00bfff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;  
+    font-weight: 600;
+    font-size: 20px;
+    cursor: grab;
+    box-shadow: 5px 5px 15px black, 10px 10px 15px #00bfff;
+    position: relative;
+      bottom: 620px;
+}
+.home:hover{
+    color: inherit;
+    background-color: inherit;
+} 
+.back{
+    background-color: #00bfff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;  
+    font-weight: 900;
+    font-size: 20px;
+    cursor: grab;
+    box-shadow: 5px 5px 15px black, 10px 10px 15px #00bfff;
+    position: relative;
+    bottom: 620px;
+  left: 30px;
+}
+.back:hover{
+    color: inherit;
+    background-color: inherit;
+}
+#bottom{
+  size: 20px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color:orange ;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+}
